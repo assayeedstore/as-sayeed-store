@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b2d">
+  <meta name="description" content="আস সাঈদ ভ্যারাইটিস স্টোর — কটিয়াদী, কিশোরগঞ্জ। নিত্যপ্রয়োজনীয় পণ্য, ভ্যারাইটিস পণ্য ও সহজ WhatsApp অর্ডার।">
+  <title>আস সাঈদ ভ্যারাইটিস স্টোর</title>
+  <style>
+    :root{--green:#123b2d;--green2:#1e6249;--gold:#e8b85a;--cream:#f7f5ef;--ink:#1d2924;--muted:#6d7771;--line:#e7e9e4;--white:#fff}
+    *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Bengali","Hind Siliguri",sans-serif}
+    button,input,textarea,select{font:inherit}button{cursor:pointer}.top{background:var(--green);color:#fff;text-align:center;padding:8px 12px;font-size:13px}
+    header{background:linear-gradient(135deg,#123b2d,#245f47);color:#fff;padding:24px 16px 28px}
+    .wrap{max-width:1100px;margin:auto}.headrow{display:flex;align-items:center;justify-content:space-between;gap:15px}
+    .brand{display:flex;align-items:center;gap:12px}.logo{width:54px;height:54px;border-radius:16px;background:#fff;color:var(--green);display:grid;place-items:center;font-size:23px;font-weight:900;border:2px solid var(--gold)}
+    h1{font-size:clamp(21px,4vw,32px);margin:0 0 4px}.tag{font-size:13px;color:#e6eee9}
+    .cartbtn,.mainbtn{border:0;border-radius:12px;background:var(--gold);color:#2c2416;font-weight:800;padding:11px 15px}
+    .hero{padding:30px 0 10px;display:grid;grid-template-columns:1.5fr 1fr;gap:20px;align-items:center}
+    .hero h2{font-size:clamp(25px,5vw,42px);line-height:1.25;margin:0 0 10px}.hero p{color:#e6eee9;margin:0 0 18px;line-height:1.7}
+    .heroart{min-height:150px;border:1px solid #ffffff30;border-radius:22px;background:radial-gradient(circle at 70% 30%,#e8b85a66,transparent 34%),linear-gradient(135deg,#ffffff12,#ffffff05);display:grid;place-items:center;font-size:68px}
+    main{max-width:1100px;margin:22px auto;padding:0 16px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0 20px}
+    .toolbar input{flex:1;min-width:190px}.field{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+    .chips{display:flex;gap:8px;overflow:auto;padding:2px 0 12px}.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;white-space:nowrap}.chip.active{background:var(--green);color:#fff;border-color:var(--green)}
+    .sectionhead{display:flex;justify-content:space-between;align-items:center;gap:10px}.sectionhead h2{font-size:22px}
+    .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.product{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+    .photo{height:155px;background:#edf1eb;display:grid;place-items:center;color:#839087;font-size:42px;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}
+    .pbody{padding:12px;display:flex;flex-direction:column;gap:7px;flex:1}.pname{font-weight:800}.desc{font-size:12px;color:var(--muted);min-height:32px}.price{font-size:19px;color:var(--green2);font-weight:900}.stock{font-size:12px;color:var(--muted)}
+    .add{border:0;background:var(--green);color:#fff;border-radius:10px;padding:9px;font-weight:700;margin-top:auto}.add:disabled{opacity:.45;cursor:not-allowed}
+    .empty{background:#fff;border:1px dashed #cbd4cc;border-radius:15px;padding:30px;text-align:center;color:var(--muted);grid-column:1/-1}
+    footer{margin-top:45px;background:#102f25;color:#eaf0ec;padding:28px 16px}.footgrid{display:grid;grid-template-columns:2fr 1fr;gap:20px}.footgrid p{color:#c8d5cd;line-height:1.7}
+    .modal{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:14px;z-index:10}.modal.show{display:flex}.panel{background:#fff;border-radius:18px;padding:18px;width:min(600px,100%);max-height:90vh;overflow:auto}.panel h2{margin-top:0}.row{display:flex;gap:8px;align-items:center}.between{justify-content:space-between}.small{font-size:12px;color:var(--muted)}.qty{display:flex;gap:8px;align-items:center}.qty button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:3px 10px}
+    .cartline{padding:10px 0;border-bottom:1px solid var(--line)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.formgrid .wide{grid-column:1/-1}
+    .darkbtn{background:var(--green);color:#fff;border:0;border-radius:10px;padding:11px 14px;font-weight:800}.lightbtn{background:#eef2ee;color:var(--green);border:0;border-radius:10px;padding:10px 12px;font-weight:700}
+    .adminlink{background:transparent;color:#c8d5cd;border:1px solid #ffffff55;border-radius:9px;padding:7px 10px;font-size:12px}
+    .adminbox{border-top:1px solid var(--line);margin-top:15px;padding-top:14px}.hidden{display:none!important}.notice{padding:10px;border-radius:10px;background:#f3f6f2;color:#40534a;font-size:13px;margin:10px 0}
+    @media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr}.heroart{min-height:100px}.footgrid{grid-template-columns:1fr}}
+    @media(max-width:420px){.grid{gap:9px}.photo{height:125px}.pbody{padding:10px}.brand{gap:8px}.logo{width:45px;height:45px}}
+  </style>
+</head>
+<body>
+  <div class="top">কটিয়াদী, কিশোরগঞ্জে স্থানীয় ডেলিভারি • ডেলিভারি চার্জ ৫০ টাকা</div>
+  <header>
+    <div class="wrap">
+      <div class="headrow">
+        <div class="brand"><div class="logo">س</div><div><h1>আস সাঈদ ভ্যারাইটিস স্টোর</h1><div class="tag">বিশ্বাসের কেনাকাটা, সাশ্রয়ের ঠিকানা</div></div></div>
+        <button class="cartbtn" id="openCart">🛒 কার্ট <span id="cartCount">০</span></button>
+      </div>
+      <div class="hero">
+        <div><h2>আপনার প্রয়োজনীয় পণ্য, এখন হাতের মুঠোয়</h2><p>মুদি ও ভ্যারাইটিস পণ্য দেখুন, কার্টে যোগ করুন এবং WhatsApp-এ অর্ডার পাঠান।</p><button class="mainbtn" onclick="document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})">পণ্য দেখুন ↓</button></div>
+        <div class="heroart">🛍️ ✨</div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="toolbar"><input class="field" id="search" placeholder="পণ্যের নাম লিখে খুঁজুন…"><button class="lightbtn" id="reload">রিফ্রেশ</button></div>
+    <div class="chips" id="categories"><button class="chip active" data-cat="all">সব পণ্য</button></div>
+    <section id="productsSection">
+      <div class="sectionhead"><h2>আমাদের পণ্য</h2><span class="small" id="productCount"></span></div>
+      <div class="grid" id="productGrid"><div class="empty">পণ্য লোড হচ্ছে…</div></div>
+    </section>
+    <div class="notice">অনলাইনে অর্ডার করতে পণ্য কার্টে যোগ করুন। অর্ডার পাঠানোর আগে আপনার নাম, মোবাইল নম্বর ও ঠিকানা দিন।</div>
+  </main>
+  <footer><div class="wrap footgrid"><div><h2>আস সাঈদ ভ্যারাইটিস স্টোর</h2><p>ঠিকানা: উত্তর ভাট্টা, গাব্বারী ব্রিজের কাছে, করগাঁও, কটিয়াদী, কিশোরগঞ্জ।<br>ফোন / WhatsApp: 01627401057</p></div><div><h3>ডেলিভারি তথ্য</h3><p>স্থানীয় ডেলিভারি চার্জ: ৫০ টাকা<br>অর্ডার নিশ্চিত করতে WhatsApp-এ যোগাযোগ করা হবে।</p><button class="adminlink" id="adminOpen">অ্যাডমিন লগইন</button></div></div></footer>
+
+  <div class="modal" id="cartModal"><div class="panel">
+    <div class="row between"><h2>আপনার কার্ট</h2><button class="lightbtn" data-close="cartModal">বন্ধ করুন ✕</button></div>
+    <div id="cartLines"></div><div class="row between"><b>পণ্যের মোট</b><b id="subtotal">৳০</b></div><div class="row between"><span>ডেলিভারি চার্জ</span><span>৳৫০</span></div><div class="row between"><b>সর্বমোট</b><b id="grandTotal">৳৫০</b></div>
+    <h3>অর্ডারের তথ্য</h3><div class="formgrid"><input class="field" id="customerName" placeholder="আপনার নাম"><input class="field" id="customerPhone" placeholder="মোবাইল নম্বর"><textarea class="field wide" id="customerAddress" rows="2" placeholder="সম্পূর্ণ ডেলিভারি ঠিকানা"></textarea></div>
+    <p class="small">অর্ডার পাঠালে তথ্য Firestore-এ সংরক্ষিত হবে এবং WhatsApp-এ অর্ডারের বিবরণ খুলবে।</p>
+    <button class="darkbtn" id="placeOrder" style="width:100%">WhatsApp-এ অর্ডার পাঠান</button><div id="orderMsg" class="small"></div>
+  </div></div>
+
+  <div class="modal" id="adminModal"><div class="panel">
+    <div class="row between"><h2>অ্যাডমিন প্যানেল</h2><button class="lightbtn" data-close="adminModal">বন্ধ করুন ✕</button></div>
+    <div id="loginArea"><p class="small">অ্যাডমিন ইমেইল ও পাসওয়ার্ড দিয়ে প্রবেশ করুন।</p><input class="field" id="adminEmail" type="email" placeholder="অ্যাডমিন ইমেইল"><input class="field" id="adminPassword" type="password" placeholder="পাসওয়ার্ড" style="margin-top:8px"><button class="darkbtn" id="loginBtn" style="width:100%;margin-top:10px">লগইন</button></div>
+    <div id="adminArea" class="hidden">
+      <div class="row between"><b id="adminWho"></b><button class="lightbtn" id="logoutBtn">লগআউট</button></div>
+      <div class="adminbox"><h3>পণ্য যোগ / সম্পাদনা</h3><input id="editId" type="hidden"><input class="field" id="pName" placeholder="পণ্যের নাম"><div class="formgrid" style="margin-top:8px"><input class="field" id="pPrice" type="number" placeholder="দাম (টাকা)"><input class="field" id="pStock" type="number" placeholder="স্টক"><input class="field" id="pCategory" placeholder="ক্যাটাগরি"><input class="field" id="pImage" placeholder="ছবির URL (একাধিক হলে কমা দিয়ে)"><textarea class="field wide" id="pDesc" rows="2" placeholder="পণ্যের বিবরণ"></textarea></div><div class="row" style="margin-top:8px"><button class="darkbtn" id="saveProduct">পণ্য সংরক্ষণ</button><button class="lightbtn" id="clearProduct">নতুন পণ্য</button></div></div>
+      <div class="adminbox"><h3>পণ্যের তালিকা</h3><div id="adminProducts" class="small">লোড হচ্ছে…</div></div>
+      <div class="adminbox"><h3>সাম্প্রতিক অর্ডার</h3><div id="adminOrders" class="small">লোড হচ্ছে…</div></div>
+    </div><div id="adminMsg" class="small"></div>
+  </div></div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-auth.js";
+  import { getFirestore, collection, getDocs, addDoc, doc, updateDoc, deleteDoc, serverTimestamp, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDmwQmDjb0JYS6zE8EEGKcpW418dXTVwhQ",
+    authDomain: "as-sayeed-varsities-store.firebaseapp.com",
+    projectId: "as-sayeed-varsities-store",
+    storageBucket: "as-sayeed-varsities-store.firebasestorage.app",
+    messagingSenderId: "382245290454",
+    appId: "1:382245290454:web:c3832c87c21d567f0ce477",
+    measurementId: "G-Z35PZLD1Q2"
+  };
+  const app = initializeApp(firebaseConfig), auth = getAuth(app), db = getFirestore(app);
+  const $ = id => document.getElementById(id);
+  const money = n => "৳" + Number(n||0).toLocaleString("bn-BD");
+  const waNumber = "8801627401057";
+  let products = [], cart = [], selectedCategory = "all", currentUser = null;
+
+  function modal(id, show=true){ $(id).classList.toggle("show",show); }
+  document.querySelectorAll("[data-close]").forEach(b=>b.addEventListener("click",()=>modal(b.dataset.close,false)));
+  $("openCart").onclick=()=>{renderCart();modal("cartModal")};
+  $("adminOpen").onclick=()=>modal("adminModal");
+  $("reload").onclick=loadProducts;
+  $("search").addEventListener("input",renderProducts);
+
+  async function loadProducts(){
+    $("productGrid").innerHTML='<div class="empty">পণ্য লোড হচ্ছে…</div>';
+    try{
+      const snap=await getDocs(collection(db,"products"));
+      products=snap.docs.map(d=>({id:d.id,...d.data()})).filter(p=>p.active!==false);
+      renderCategories();renderProducts();
+    }catch(e){$("productGrid").innerHTML='<div class="empty">পণ্য লোড করা যায়নি। Firestore Rules ও ইন্টারনেট সংযোগ পরীক্ষা করুন।</div>';console.error(e)}
+  }
+  function renderCategories(){
+    const cats=[...new Set(products.map(p=>p.category).filter(Boolean))];
+    $("categories").innerHTML='<button class="chip '+(selectedCategory==="all"?"active":"")+'" data-cat="all">সব পণ্য</button>'+cats.map(c=>`<button class="chip ${selectedCategory===c?"active":""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+    $("categories").querySelectorAll("button").forEach(b=>b.onclick=()=>{selectedCategory=b.dataset.cat;renderCategories();renderProducts()});
+  }
+  function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+  function renderProducts(){
+    const term=$("search").value.trim().toLowerCase();
+    const list=products.filter(p=>(selectedCategory==="all"||p.category===selectedCategory)&&(`${p.name||""} ${p.description||""}`).toLowerCase().includes(term));
+    $("productCount").textContent=list.length+"টি পণ্য";
+    $("productGrid").innerHTML=list.length?list.map(p=>{
+      const images=Array.isArray(p.images)?p.images:(p.image?[p.image]:[]);
+      const image=images[0]||"";
+      return `<article class="product"><div class="photo">${image?`<img src="${esc(image)}" alt="${esc(p.name)}" onerror="this.parentElement.textContent='🛍️'">`:"🛍️"}</div><div class="pbody"><div class="pname">${esc(p.name||"নামহীন পণ্য")}</div><div class="desc">${esc(p.description||"")}</div><div class="price">${money(p.price)}</div><div class="stock">${Number(p.stock||0)>0?"স্টকে আছে":"স্টক শেষ"}</div><button class="add" data-add="${p.id}" ${Number(p.stock||0)<=0?"disabled":""}>কার্টে যোগ করুন</button></div></article>`;
+    }).join(""):'<div class="empty">এখনো কোনো পণ্য পাওয়া যায়নি। অ্যাডমিন প্যানেল থেকে পণ্য যোগ করুন।</div>';
+    $("productGrid").querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>addToCart(b.dataset.add));
+  }
+  function addToCart(id){const p=products.find(x=>x.id===id);if(!p)return;const item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({id,name:p.name,price:Number(p.price||0),qty:1});updateCartCount();}
+  function updateCartCount(){$("cartCount").textContent=cart.reduce((a,x)=>a+x.qty,0).toLocaleString("bn-BD");}
+  function renderCart(){
+    $("cartLines").innerHTML=cart.length?cart.map(x=>`<div class="row between cartline"><div><b>${esc(x.name)}</b><div class="small">${money(x.price)} × ${x.qty}</div></div><div class="qty"><button data-minus="${x.id}">−</button><b>${x.qty}</b><button data-plus="${x.id}">+</button><button data-remove="${x.id}">✕</button></div></div>`).join(""):'<div class="empty">কার্ট খালি। আগে পণ্য যোগ করুন।</div>';
+    $("cartLines").querySelectorAll("[data-minus]").forEach(b=>b.onclick=()=>changeQty(b.dataset.minus,-1));
+    $("cartLines").querySelectorAll("[data-plus]").forEach(b=>b.onclick=()=>changeQty(b.dataset.plus,1));
+    $("cartLines").querySelectorAll("[data-remove]").forEach(b=>b.onclick=()=>{cart=cart.filter(x=>x.id!==b.dataset.remove);renderCart();updateCartCount()});
+    const sub=cart.reduce((a,x)=>a+x.price*x.qty,0);$("subtotal").textContent=money(sub);$("grandTotal").textContent=money(sub+(cart.length?50:0));
+  }
+  function changeQty(id,delta){const x=cart.find(i=>i.id===id);if(x){x.qty+=delta;if(x.qty<=0)cart=cart.filter(i=>i.id!==id)}renderCart();updateCartCount()}
+  $("placeOrder").onclick=async()=>{
+    const name=$("customerName").value.trim(),phone=$("customerPhone").value.trim(),address=$("customerAddress").value.trim();
+    if(!cart.length){$("orderMsg").textContent="কার্টে আগে পণ্য যোগ করুন।";return}
+    if(!name||!phone||!address){$("orderMsg").textContent="নাম, মোবাইল নম্বর ও ঠিকানা পূরণ করুন।";return}
+    const subtotal=cart.reduce((a,x)=>a+x.price*x.qty,0),total=subtotal+50;
+    const order={customerName:name,phone,address,items:cart.map(x=>({productId:x.id,name:x.name,price:x.price,quantity:x.qty})),subtotal,deliveryFee:50,total,status:"pending",createdAt:serverTimestamp()};
+    $("placeOrder").disabled=true;$("orderMsg").textContent="অর্ডার সংরক্ষণ হচ্ছে…";
+    try{
+      await addDoc(collection(db,"orders"),order);
+      const lines=cart.map(x=>`• ${x.name} — ${x.qty} × ${x.price} = ${x.qty*x.price} টাকা`).join("\n");
+      const msg=`আস সাঈদ ভ্যারাইটিস স্টোরে নতুন অর্ডার\nনাম: ${name}\nমোবাইল: ${phone}\nঠিকানা: ${address}\n\n${lines}\n\nপণ্যের মোট: ${subtotal} টাকা\nডেলিভারি: ৫০ টাকা\nসর্বমোট: ${total} টাকা`;
+      window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`,"_blank");
+      $("orderMsg").textContent="অর্ডার সংরক্ষিত হয়েছে। WhatsApp-এ পাঠানোর জন্য নতুন পেজ খুলেছে।";
+      cart=[];updateCartCount();renderCart();
+    }catch(e){$("orderMsg").textContent="অর্ডার সংরক্ষণ হয়নি। Firestore Rules আপডেট করে আবার চেষ্টা করুন।";console.error(e)}
+    finally{$("placeOrder").disabled=false}
+  };
+
+  $("loginBtn").onclick=async()=>{
+    $("adminMsg").textContent="লগইন হচ্ছে…";
+    try{await signInWithEmailAndPassword(auth,$("adminEmail").value.trim(),$("adminPassword").value);$("adminPassword").value="";}
+    catch(e){$("adminMsg").textContent="লগইন হয়নি। ইমেইল/পাসওয়ার্ড ও Authentication চালু আছে কি না দেখুন।";console.error(e)}
+  };
+  $("logoutBtn").onclick=()=>signOut(auth);
+  onAuthStateChanged(auth,user=>{
+    currentUser=user;
+    $("loginArea").classList.toggle("hidden",!!user);$("adminArea").classList.toggle("hidden",!user);
+    if(user){$("adminWho").textContent="লগইন: "+user.email;loadAdminData()}
+  });
+  async function loadAdminData(){await loadAdminProducts();await loadOrders()}
+  async function loadAdminProducts(){
+    try{const snap=await getDocs(collection(db,"products"));const list=snap.docs.map(d=>({id:d.id,...d.data()}));
+      $("adminProducts").innerHTML=list.length?list.map(p=>`<div class="row between" style="padding:7px 0;border-bottom:1px solid #eee"><span>${esc(p.name)} — ${money(p.price)}</span><span><button class="lightbtn" data-edit="${p.id}">সম্পাদনা</button> <button class="lightbtn" data-del="${p.id}">মুছুন</button></span></div>`).join(""):"কোনো পণ্য নেই";
+      $("adminProducts").querySelectorAll("[data-edit]").forEach(b=>b.onclick=()=>editProduct(b.dataset.edit,list));
+      $("adminProducts").querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>removeProduct(b.dataset.del));
+    }catch(e){$("adminProducts").textContent="পণ্য তালিকা পড়া যায়নি।"}
+  }
+  function editProduct(id,list){const p=list.find(x=>x.id===id);if(!p)return;$("editId").value=id;$("pName").value=p.name||"";$("pPrice").value=p.price??"";$("pStock").value=p.stock??"";$("pCategory").value=p.category||"";$("pImage").value=(p.images|| (p.image?[p.image]:[])).join(", ");$("pDesc").value=p.description||"";window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})}
+  async function removeProduct(id){if(!confirm("এই পণ্যটি মুছবেন?"))return;try{await deleteDoc(doc(db,"products",id));await loadProducts();await loadAdminProducts()}catch(e){$("adminMsg").textContent="পণ্য মুছতে পারিনি।"}}
+  $("clearProduct").onclick=()=>{["editId","pName","pPrice","pStock","pCategory","pImage","pDesc"].forEach(id=>$(id).value="")};
+  $("saveProduct").onclick=async()=>{
+    const name=$("pName").value.trim(),price=Number($("pPrice").value),stock=Number($("pStock").value);
+    if(!name||!Number.isFinite(price)||price<0){$("adminMsg").textContent="পণ্যের নাম ও সঠিক দাম দিন।";return}
+    const images=$("pImage").value.split(",").map(x=>x.trim()).filter(Boolean);
+    const data={name,price,stock:Number.isFinite(stock)?stock:0,category:$("pCategory").value.trim()||"অন্যান্য",images,image:images[0]||"",description:$("pDesc").value.trim(),active:true,updatedAt:serverTimestamp()};
+    try{const id=$("editId").value;if(id)await updateDoc(doc(db,"products",id),data);else await addDoc(collection(db,"products"),{...data,createdAt:serverTimestamp()});$("adminMsg").textContent="পণ্য সংরক্ষণ হয়েছে।";$("clearProduct").click();await loadProducts();await loadAdminProducts()}
+    catch(e){$("adminMsg").textContent="পণ্য সংরক্ষণ হয়নি। Firestore Rules বা অ্যাডমিন লগইন পরীক্ষা করুন।";console.error(e)}
+  };
+  async function loadOrders(){
+    try{const q=query(collection(db,"orders"),orderBy("createdAt","desc"),limit(20)),snap=await getDocs(q);
+      $("adminOrders").innerHTML=snap.empty?"এখনো অর্ডার নেই":snap.docs.map(d=>{const o=d.data();return `<div style="padding:9px 0;border-bottom:1px solid #eee"><b>${esc(o.customerName)} — ${money(o.total)}</b><br>${esc(o.phone)} • ${esc(o.address)}<br><span class="small">স্ট্যাটাস: ${esc(o.status||"pending")}</span></div>`}).join("");
+    }catch(e){$("adminOrders").textContent="অর্ডার দেখা যাচ্ছে না। Admin Firestore Rules পরীক্ষা করুন।"}
+  }
+  loadProducts();
+</script>
+</body>
+</html>
